@@ -1,8 +1,6 @@
 'use client'
 
-import Link from "next/link"
 import useRoutes from "@/hooks/useRoutes";
-import Avatar from "../avatars/Avatar";
 import SidebarItem from "./SidebarItem";
 
 function SidebarContent() {
@@ -25,36 +23,10 @@ function SidebarContent() {
                     label={item.label}
                     icon={item.icon}
                     active={item.active}
+                    type={item.type}
                     onClick={item.onClick}
                 />
             ))}
-            <Link href="/">
-                <div className="
-                    p-3
-                    pb-2
-                    my-1
-                    flex
-                    flex-row
-                    items-center
-                    rounded-lg
-                    hover:bg-gray-100
-                    hover:text-cyan-300
-                ">
-                    <div>
-                        <Avatar image='/images/place-holder.jpg'/>
-                    </div>
-                    <div className='
-                        hidden
-                        pl-4
-                        w-fit
-                        lg:flex
-                        lg:items-center
-                        overflow-x-hidden
-                    '>
-                        <span className='text-sm'>Trang cá nhân</span>
-                    </div>
-                </div>
-            </Link>
         </div>
     )
 }

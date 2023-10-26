@@ -4,11 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 
 function Avatar({image, size}){
-    const [width, setWidth] = useState(27)
-
-    if(size === "lg"){
-        setWidth(40)
-    }
+    const [width, setWidth] = useState(size)
 
     return (
         <Image
@@ -17,6 +13,7 @@ function Avatar({image, size}){
             height={width}
             className='
                 rounded-full
+                min-w-[27px]
             '
         />
     )

@@ -1,11 +1,13 @@
 import clsx from "clsx"
 import Link from "next/link"
+import Avatar from "../Avatar"
 
 function SidebarItem({
     label,
     icon: Icon,
     href,
     onClick,
+    type,
     active
 }) {
     return (
@@ -13,8 +15,7 @@ function SidebarItem({
             { href ? (
                 <Link href={href}>
                     <div className={clsx(`
-                        p-3
-                        pb-2
+                        p-2
                         my-1
                         flex
                         flex-row
@@ -22,10 +23,20 @@ function SidebarItem({
                         rounded-lg
                         hover:bg-gray-100
                         hover:text-cyan-300
-                    `)}>
-                        <Icon className={clsx(`w-6 h-6 transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-11 duration-300`,
-                            active && 'fill-cyan-400'
-                        )}/>
+                    `, active && 'bg-gray-100')}>
+
+                        <div className="flex items-center">
+                            {type !== 'image' ? (
+                                <Icon className={clsx(`
+                                    w-6 h-6 
+                                    transition ease-in-out delay-15 hover:-translate-y-1 
+                                    hover:scale-11 duration-300`,
+                                    active && 'fill-cyan-400'
+                                )}/>
+                            ): (
+                                <Avatar image='/images/place-holder.jpg' size='27'/>
+                            )}
+                        </div>
                         <div className='
                             hidden
                             pl-4
@@ -41,8 +52,7 @@ function SidebarItem({
                     </div>
                 </Link> ): (
                     <div className={clsx(`
-                        p-3
-                        pb-2
+                        p-2
                         my-1
                         flex
                         flex-row
@@ -51,8 +61,15 @@ function SidebarItem({
                         rounded-lg
                         hover:bg-gray-100
                         hover:text-cyan-300
-                    `)}>
-                        <Icon className="w-6 h-6 transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-11 duration-300"/>
+                    `, active && 'bg-gray-100')}>
+                        <div className="flex items-center justify-center">
+                            <Icon className={clsx(`
+                                w-6 h-6 
+                                transition ease-in-out delay-15 hover:-translate-y-1 
+                                hover:scale-11 duration-300`,
+                                active && 'fill-cyan-400'
+                            )}/>
+                        </div>
                         <div className='
                             hidden
                             pl-4

@@ -7,6 +7,11 @@ import TabletLogo from "./TabletLogo";
 function Sidebar(){
     return (
         <div className="
+            hidden
+            md:flex
+            lg:flex
+            flex-col
+            w-16
             lg:w-56
             h-full 
             fixed
@@ -15,8 +20,6 @@ function Sidebar(){
             pb-5 
             border-r 
             border-gray-300
-            flex
-            flex-col
         ">
             <DesktopLogo/>
             <TabletLogo/>

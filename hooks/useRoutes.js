@@ -47,6 +47,12 @@ const useRoutes = () => {
             label: 'Tạo',
             icon: BiMessageSquareAdd,
         },
+        { 
+            label: 'Trang cá nhân',
+            type: 'image',
+            href: '/suu10102001',
+            active: pathname === '/suu10102001',
+        },
     ], [pathname])
 
     return routes
