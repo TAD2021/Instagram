@@ -1,3 +1,4 @@
+import Statuses from "./statuses/Statuses"
 import Stories from "./stories/Stories"
 
 function PostsList() {
@@ -5,6 +6,7 @@ function PostsList() {
         <div className="max-w-2xl w-full">
             <div className="mt-4">
                 <Stories/>
+                <Statuses/>
             </div>
         </div>
     )
