@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 
 function Avatar({image, size}){
-    const [width, setWidth] = useState(24)
+    const [width, setWidth] = useState(27)
 
     if(size === "lg"){
         setWidth(40)

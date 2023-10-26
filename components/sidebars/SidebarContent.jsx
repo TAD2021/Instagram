@@ -11,10 +11,10 @@ function SidebarContent() {
     return (
         <div
             className="
-                lg:w-full
-                lg:z-40
-                lg:flex
-                lg:flex-col
+                w-full
+                z-40
+                flex
+                flex-col
                 justify-between
             "
         >
@@ -31,6 +31,7 @@ function SidebarContent() {
             <Link href="/">
                 <div className="
                     p-3
+                    pb-2
                     my-1
                     flex
                     flex-row
@@ -47,7 +48,7 @@ function SidebarContent() {
                         pl-4
                         w-fit
                         lg:flex
-                        items-center
+                        lg:items-center
                         overflow-x-hidden
                     '>
                         <span className='text-sm'>Trang cá nhân</span>

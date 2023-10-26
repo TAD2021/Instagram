@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Sidebar/>
-      <main className="flex items-center justify-center">
+      <main className="flex justify-center w-full">
         g
       </main>
     </div>

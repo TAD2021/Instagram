@@ -23,7 +23,7 @@ function SidebarItem({
                         hover:bg-gray-100
                         hover:text-cyan-300
                     `)}>
-                        <Icon className={clsx(`w-5 h-5 transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-11 duration-300`,
+                        <Icon className={clsx(`w-6 h-6 transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-11 duration-300`,
                             active && 'fill-cyan-400'
                         )}/>
                         <div className='
@@ -52,7 +52,7 @@ function SidebarItem({
                         hover:bg-gray-100
                         hover:text-cyan-300
                     `)}>
-                        <Icon className="w-5 h-5 transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-11 duration-300"/>
+                        <Icon className="w-6 h-6 transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-11 duration-300"/>
                         <div className='
                             hidden
                             pl-4
