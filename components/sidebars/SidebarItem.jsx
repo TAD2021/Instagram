@@ -22,7 +22,7 @@ function SidebarItem({
                         items-center
                         rounded-lg
                         hover:bg-gray-100
-                        hover:text-cyan-300
+                        hover:text-rose-400
                     `, active && 'bg-gray-100')}>
 
                         <div className="flex items-center">
@@ -30,8 +30,8 @@ function SidebarItem({
                                 <Icon className={clsx(`
                                     w-6 h-6 
                                     transition ease-in-out delay-15 hover:-translate-y-1 
-                                    hover:scale-11 duration-300`,
-                                    active && 'fill-cyan-400'
+                                    hover:scale-11 duration-400`,
+                                    active && 'fill-rose-500'
                                 )}/>
                             ): (
                                 <Avatar image='/images/place-holder.jpg' size='27'/>
@@ -46,7 +46,7 @@ function SidebarItem({
                             overflow-x-hidden
                         '>
                             <span className={clsx(`text-sm`,
-                                active && 'font-bold text-cyan-400'
+                                active && 'font-bold text-rose-400'
                             )}>{label}</span>
                         </div>
                     </div>
@@ -60,14 +60,14 @@ function SidebarItem({
                         cursor-pointer
                         rounded-lg
                         hover:bg-gray-100
-                        hover:text-cyan-300
+                        hover:text-rose-400
                     `, active && 'bg-gray-100')}>
                         <div className="flex items-center justify-center">
                             <Icon className={clsx(`
                                 w-6 h-6 
                                 transition ease-in-out delay-15 hover:-translate-y-1 
-                                hover:scale-11 duration-300`,
-                                active && 'fill-cyan-400'
+                                hover:scale-11 duration-400`,
+                                active && 'fill-rose-400'
                             )}/>
                         </div>
                         <div className='

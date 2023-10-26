@@ -1,10 +1,10 @@
-import NewsList from "./news/NewsLists"
+import Stories from "./stories/Stories"
 
 function PostsList() {
     return (
         <div className="max-w-2xl w-full">
             <div className="mt-4">
-                <NewsList/>
+                <Stories/>
             </div>
         </div>
     )

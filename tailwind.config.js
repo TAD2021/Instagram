@@ -14,5 +14,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('tailwind-scroll-behavior')(),
+  ],
+  variants: {
+    scrollBehavior: ['motion-safe', 'motion-reduce', 'responsive']
+  }
 }

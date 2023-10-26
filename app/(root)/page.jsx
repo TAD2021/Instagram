@@ -10,7 +10,7 @@ export default function Home() {
       <main className="
         flex items-center flex-col
         w-full 
-        ml-16 lg:ml-56
+        md:ml-16 lg:ml-56
         pt-6
       ">
         <PostsList />
