@@ -11,11 +11,11 @@ export default function Home() {
       <main className="
         flex justify-center
         w-full 
-        md:ml-16 lg:ml-56
+        md:ml-16 xl:ml-56
         pt-6
       ">
-        <PostsList />
-        <Recommend />
+          <PostsList />
+          <Recommend />
       </main>
     </div>
   )

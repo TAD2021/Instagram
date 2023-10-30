@@ -12,17 +12,17 @@ const useRoutes = () => {
 
     const routes = useMemo(() => [
         { 
-            label: 'Trang chủ',
+            label: 'Home',
             href: '/', 
             icon: AiOutlineHome,
             active: pathname === '/'
         },
         { 
-            label: 'Tìm kiếm',
+            label: 'Search',
             icon: BsSearch,
         },
         { 
-            label: 'Khám phá',
+            label: 'Explore',
             href: '/explore', 
             icon: AiOutlineCompass,
             active: pathname === '/explore'
@@ -34,21 +34,21 @@ const useRoutes = () => {
             active: pathname === '/reels'
         },
         { 
-            label: 'Tin nhắn',
+            label: 'Messages',
             href: '/direct/inbox/', 
             icon: PiTelegramLogoThin,
             active: pathname === '/direct/inbox/'
         },
         { 
-            label: 'Thông báo',
+            label: 'Notifications',
             icon: AiOutlineHeart,
         },
         { 
-            label: 'Tạo',
+            label: 'Create',
             icon: BiMessageSquareAdd,
         },
         { 
-            label: 'Trang cá nhân',
+            label: 'Profile',
             type: 'image',
             href: '/suu10102001',
             active: pathname === '/suu10102001',

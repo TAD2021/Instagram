@@ -23,7 +23,7 @@ function SidebarItem({
                         rounded-lg
                         hover:bg-gray-100
                         hover:text-rose-400
-                    `, active && 'bg-gray-100')}>
+                    `)}>
 
                         <div className="flex items-center">
                             {type !== 'image' ? (
@@ -41,7 +41,7 @@ function SidebarItem({
                             hidden
                             pl-4
                             w-fit
-                            lg:flex
+                            xl:flex
                             items-center
                             overflow-x-hidden
                         '>
@@ -61,7 +61,9 @@ function SidebarItem({
                         rounded-lg
                         hover:bg-gray-100
                         hover:text-rose-400
-                    `, active && 'bg-gray-100')}>
+                    `)}
+                        onClick={() => console.log(label)}
+                    >
                         <div className="flex items-center justify-center">
                             <Icon className={clsx(`
                                 w-6 h-6 
@@ -74,7 +76,7 @@ function SidebarItem({
                             hidden
                             pl-4
                             w-fit
-                            lg:flex
+                            xl:flex
                             items-center
                             overflow-x-hidden
                         '>

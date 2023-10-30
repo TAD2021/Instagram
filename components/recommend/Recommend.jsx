@@ -1,8 +1,10 @@
+import RecommendList from "./RecommendList"
 import UserItem from "./UserItem"
 
 function Recommend(){
     return (
         <div className="
+            hidden recommend
             w-96 h-screen
             pl-16
         ">
@@ -12,9 +14,10 @@ function Recommend(){
             ">
                 <div className="
                     px-4 bg-transparent
-                    flex flex-shrink-0
+                    flex flex-shrink-0 flex-col
                 ">
-                    <UserItem />
+                    <UserItem img='/images/place-holder.jpg' name='thongle6636' description='Thong Le' owner/>
+                    <RecommendList/>
                 </div>
             </div>
         </div>

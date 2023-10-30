@@ -9,10 +9,9 @@ function Sidebar(){
         <div className="
             hidden
             md:flex
-            lg:flex
             flex-col
             w-16
-            lg:w-56
+            xl:w-56
             h-full 
             fixed
             pt-2 
@@ -26,7 +25,7 @@ function Sidebar(){
             <SidebarContent/> 
             <SidebarItem 
                 href='/'
-                label='Xem thêm'
+                label='More'
                 icon={CgDetailsMore}
             />
         </div>
