@@ -1,5 +1,5 @@
 import RecommendList from "./RecommendList"
-import UserItem from "./UserItem"
+import UserItem from "../UserItem"
 
 function Recommend(){
     return (

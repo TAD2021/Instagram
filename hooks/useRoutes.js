@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { AiOutlineHome, AiOutlineCompass, AiOutlineHeart } from 'react-icons/ai';
 import { BsSearch } from "react-icons/bs";  
 import { GoVideo } from "react-icons/go";
-import { PiTelegramLogoThin } from "react-icons/pi";
+import { PiTelegramLogo } from "react-icons/pi";
 import { BiMessageSquareAdd } from "react-icons/bi";
 
 
@@ -36,7 +36,7 @@ const useRoutes = () => {
         { 
             label: 'Messages',
             href: '/direct/inbox/', 
-            icon: PiTelegramLogoThin,
+            icon: PiTelegramLogo,
             active: pathname === '/direct/inbox/'
         },
         { 

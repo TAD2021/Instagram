@@ -1,5 +1,5 @@
 import Link from "next/link"
-import UserItem from "./UserItem"
+import UserItem from "../UserItem"
 
 function RecommendList(){
     return (
