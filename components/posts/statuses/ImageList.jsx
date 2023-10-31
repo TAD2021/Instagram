@@ -32,9 +32,9 @@ function ImageList(){
                 scrollbar-hide scroll-smooth
             ">
                 <Image className="rounded-sm" src='/images/post1.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
-                <Image src='/images/place-holder.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
-                <Image src='/images/post1.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
-                <Image src='/images/post1.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
+                <Image src='/images/post2.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
+                <Image src='/images/post3.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
+                <Image src='/images/post4.jpg' width={imagesRef.current?.clientWidth || '500'} height='500' style={{objectFit:"cover"}} alt=''/> 
             </div>
             <button 
                 onClick={() => imagesRef.current.scrollLeft = imagesRef.current.scrollLeft - imagesRef.current.clientWidth}

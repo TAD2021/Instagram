@@ -1,8 +1,9 @@
 import UserItem from "@/components/UserItem"
 import ImageList from "./ImageList"
 import Actions from "./Actions"
+import Reel from "@/components/Reel"
 
-function Status(){
+function Status({type}){
     return (
         <article className="mx-1">
             <div className="
@@ -12,7 +13,8 @@ function Status(){
                 <div className="pl-1 pb-3">
                     <UserItem img='/images/user6.jpg' name='artof666k' description='Singapore' time='10w' status/>
                 </div>
-                <ImageList/>
+                {type === "img" && <ImageList/>}
+                {type === "video" && <Reel/>}
                 <Actions/>       
             </div>
         </article>

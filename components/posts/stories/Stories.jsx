@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import Story from "./Story"
-import { FcPrevious, FcNext } from "react-icons/fc";
+import { FcNext, FcPrevious } from "react-icons/fc";
 import { useRef, useState } from "react";
 
 function Stories() {
