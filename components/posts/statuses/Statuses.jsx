@@ -7,6 +7,7 @@ function Statuses() {
                 <div className="max-w-md w-full">
                     <Status type="img"/>
                     <Status type="video"/>
+                    <Status type="video"/>
                 </div>
             </div>
         </div>

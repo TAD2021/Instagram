@@ -8,7 +8,7 @@ function Reel(){
     const videoRef = useRef(null);
     const [paddingBottom, setPaddingBottom] = useState('125%')
     const [isMuted, setIsMuted] = useState(true)
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     // Function to handle play/pause
     const togglePlay = () => {
@@ -28,49 +28,49 @@ function Reel(){
     }
     useEffect(() => {
         const videoElement = videoRef.current;
-        videoRef.current.play()
         if(videoElement.videoWidth > videoElement.videoHeight){
             setPaddingBottom('80%')
         }
-    }, []);
-    useEffect(() => {
-        const handleScroll = () => {
-            const videoPosition = videoRef.current.getBoundingClientRect();
-        
-            // Kiểm tra nếu video nằm trong khung nhìn của trình duyệt
-            if (videoPosition.top >= 0 && videoPosition.bottom <= window.innerHeight) {
-                // Kiểm tra nếu video chưa được phát
-                if (!isPlaying) {
-                    videoRef.current.play();
-                    setIsPlaying(true);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    videoElement.play().catch((error) => {
+                        // Xử lý lỗi nếu có
+                        console.error('Failed to play video:', error)
+                    });
+                    setIsPlaying(true)
+                } else {
+                    videoElement.pause()
+                    setIsPlaying(false)
                 }
-            } else {
-                // Kiểm tra nếu video đang phát
-                if (isPlaying) {
-                    videoRef.current.pause();
-                    setIsPlaying(false);
-                }
-            }
+            });
+        });
+      
+        observer.observe(videoElement);
+
+        const handleVideoEnded = () => {
+            videoElement.currentTime = 0; // Tua lại video về thời điểm 0
+            videoElement.play(); // Phát video lại
         };
-    
-        window.addEventListener('scroll', handleScroll);
-    
+            
+        videoElement.addEventListener('ended', handleVideoEnded);
+            
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            observer.unobserve(videoElement);
+            videoElement.removeEventListener('ended', handleVideoEnded);
         };
-    }, [isPlaying]);
-    
+    }, []);
 
     return (
         <div className="flex">
             <div className="relative w-full" style={{paddingBottom: paddingBottom}}>
-                <div className="absolute top-0 left-0 w-full h-full bg-black overflow-hidden flex">
+                <div className="absolute top-0 left-0 w-full h-full bg-black overflow-hidden flex justify-center">
                     <video
-                        autoPlay
                         ref={videoRef} 
-                        width='100%'
+                        width='80%'
                         onClick={togglePlay}
                         className="cursor-pointer"
+                        muted
                     >
                         <source src="/videos/music2.mp4" type="video/mp4" />
                     </video>
