@@ -6,10 +6,10 @@ function SidebarItem({
     label,
     icon: Icon,
     href,
-    onClick,
     type,
     active
 }) {
+
     return (
         <>
             { href ? (
@@ -61,9 +61,7 @@ function SidebarItem({
                         rounded-lg
                         hover:bg-gray-100
                         hover:text-rose-400
-                    `)}
-                        onClick={() => console.log(label)}
-                    >
+                    `)}>
                         <div className="flex items-center justify-center">
                             <Icon className={clsx(`
                                 w-6 h-6 

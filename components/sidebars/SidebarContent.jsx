@@ -24,7 +24,6 @@ function SidebarContent() {
                     icon={item.icon}
                     active={item.active}
                     type={item.type}
-                    onClick={item.onClick}
                 />
             ))}
         </div>

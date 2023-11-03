@@ -6,7 +6,14 @@ import {FiMoreHorizontal} from "react-icons/fi"
 import { useState } from "react"
 import clsx from "clsx"
 
-function UserItem({img, name, description, owner, status, time}){
+function UserItem({
+    img, 
+    name, 
+    description, 
+    owner, 
+    status, 
+    time
+}){
     const [active, setActive] = useState(false)
 
     return (

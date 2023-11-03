@@ -6,7 +6,6 @@ import { GoVideo } from "react-icons/go";
 import { PiTelegramLogo } from "react-icons/pi";
 import { BiMessageSquareAdd } from "react-icons/bi";
 
-
 const useRoutes = () => {
     const pathname = usePathname()
 
@@ -19,7 +18,7 @@ const useRoutes = () => {
         },
         { 
             label: 'Search',
-            icon: BsSearch,
+            icon: BsSearch
         },
         { 
             label: 'Explore',
