@@ -1,5 +1,4 @@
 "use client"
-
 import DesktopLogo from "@/components/sidebars/DesktopLogo"
 import SidebarContent from "@/components/sidebars/SidebarContent"
 import {CgDetailsMore} from "react-icons/cg";
@@ -45,7 +44,7 @@ function Sidebar(){
                     icon={CgDetailsMore}
                 />
             </div>
-            <SearchWrapper />
+            <SearchWrapper isSearch={isSearch}/>
         </div>
     )
 }

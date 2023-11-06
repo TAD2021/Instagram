@@ -6,7 +6,6 @@ import { BiSolidVolumeMute, BiSolidVolumeFull } from "react-icons/bi"
 
 function Reel(){
     const videoRef = useRef(null);
-    const [paddingBottom, setPaddingBottom] = useState('125%')
     const [isMuted, setIsMuted] = useState(true)
     const [isPlaying, setIsPlaying] = useState(true);
 
@@ -28,9 +27,6 @@ function Reel(){
     }
     useEffect(() => {
         const videoElement = videoRef.current;
-        if(videoElement.videoWidth > videoElement.videoHeight){
-            setPaddingBottom('80%')
-        }
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -63,11 +59,10 @@ function Reel(){
 
     return (
         <div className="flex">
-            <div className="relative w-full" style={{paddingBottom: paddingBottom}}>
+            <div className="relative w-full" style={{paddingBottom: '125%'}}>
                 <div className="absolute top-0 left-0 w-full h-full bg-black overflow-hidden flex justify-center">
                     <video
                         ref={videoRef} 
-                        width='80%'
                         onClick={togglePlay}
                         className="cursor-pointer"
                         muted

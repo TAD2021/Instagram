@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Avatar from "./Avatar"
 import {FiMoreHorizontal} from "react-icons/fi"
+import {AiOutlineClose} from "react-icons/ai"
 import { useState } from "react"
 import clsx from "clsx"
 
@@ -12,6 +13,7 @@ function UserItem({
     description, 
     owner, 
     status, 
+    search,
     time
 }){
     const [active, setActive] = useState(false)
@@ -51,9 +53,13 @@ function UserItem({
             </div>
             <div className="flex items-center ml-3 cursor-pointer">
                 {status ? <FiMoreHorizontal className="h-5 w-5"/> :
-                    <span className="text-cyan-400 text-xs font-semibold">
-                        {owner ? 'Switch' : 'Follow'}
-                    </span>
+                    search ? (
+                        <AiOutlineClose className="h-5 w-5"/> 
+                    ) : (
+                        <span className="text-cyan-400 text-xs font-semibold">
+                            {owner ? 'Switch' : 'Follow'}
+                        </span>
+                    )
                 }
             </div>
         </div>

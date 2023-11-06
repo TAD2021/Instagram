@@ -1,10 +1,12 @@
 'use client'
-import clsx from 'clsx';
-import { useSelector } from 'react-redux';
-import { AiOutlineCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
 
-function SearchWrapper(){
-    const isSearch = useSelector(state => state.search.search.isSearch)
+import clsx from 'clsx';
+import { AiOutlineCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
+import RecentSearch from './RecentSearch';
+import { useState } from 'react';
+
+function SearchWrapper({isSearch}){
+    const [searchValue, setSearchValue] = useState('')
 
     return (
         <div className={clsx(`
@@ -35,7 +37,14 @@ function SearchWrapper(){
                     <div className='w-full flex h-16'>
                         <div className='mx-4 w-full'>
                             <div className='flex mb-6 h-10 relative'>
-                                <input placeholder='Search...' className='rounded-md flex-1 py-1 px-4 bg-gray-100 outline-none'></input>
+                                <input 
+                                    placeholder='Search...' 
+                                    className='rounded-md flex-1 py-1 px-4 bg-gray-100 outline-none'
+                                    value={searchValue}
+                                    onChange={(e)=>setSearchValue(e.target.value)}
+                                >
+                                
+                                </input>
                                 {/* <div className='absolute right-4 top-3 cursor-pointer'>
                                     <AiOutlineCloseCircle className='w-full h-full fill-gray-600'/>
                                 </div> */}
@@ -44,6 +53,9 @@ function SearchWrapper(){
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className='flex h-full pt-3'>
+                        <RecentSearch />
                     </div>
                 </div>
             </div>    
