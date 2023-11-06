@@ -10,8 +10,6 @@ function Stories() {
     const [showLeft, setShowLeft] = useState(false)
     const [showRight, setShowRight] = useState(true)
 
-    console.log(storiesRef.current)
-
     const onScroll = () => {
         if(storiesRef.current.scrollLeft > 0){
             setShowLeft(true)

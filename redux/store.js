@@ -3,16 +3,18 @@ import { combineReducers } from 'redux';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import sidebarReducer from './features/sidebarSlice';
+import authReducer from './authSlice';
+import searchReducer from './searchSlice';
 
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['sidebar'],
+    whitelist: ['auth', 'search'],
 };
 
 const reducer = combineReducers({
-    sidebar: sidebarReducer
+    auth: authReducer,
+    search: searchReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

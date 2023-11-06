@@ -1,6 +1,8 @@
 import clsx from "clsx"
 import Link from "next/link"
 import Avatar from "../Avatar"
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleSearch } from '@/redux/searchSlice';
 
 function SidebarItem({
     label,
@@ -9,6 +11,16 @@ function SidebarItem({
     type,
     active
 }) {
+    const dispatch = useDispatch();
+    const handleModal = () => {
+        if(label === 'Search'){
+            dispatch(toggleSearch());
+        }else if(label === 'Notifications'){
+            console.log('Notifications')
+        }else{
+            console.log('Create')
+        }
+    }
 
     return (
         <>
@@ -61,7 +73,9 @@ function SidebarItem({
                         rounded-lg
                         hover:bg-gray-100
                         hover:text-rose-400
-                    `)}>
+                    `)}
+                        onClick={handleModal}
+                    >
                         <div className="flex items-center justify-center">
                             <Icon className={clsx(`
                                 w-6 h-6 
