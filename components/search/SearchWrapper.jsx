@@ -4,9 +4,13 @@ import clsx from 'clsx';
 import { AiOutlineCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
 import RecentSearch from './RecentSearch';
 import { useState } from 'react';
+import useClose from '@/hooks/useClose';
+import { useDispatch } from 'react-redux';
 
-function SearchWrapper({isSearch}){
+function SearchWrapper({sidebarRef, isSearch}){
     const [searchValue, setSearchValue] = useState('')
+    const dispatch = useDispatch()
+    useClose(sidebarRef, dispatch)
 
     return (
         <div className={clsx(`
@@ -16,7 +20,7 @@ function SearchWrapper({isSearch}){
             left-16
             w-0
             h-full
-            z-10
+            z-30
             overflow-hidden
             transition-all duration-500 ease-in-out
         `, isSearch && 'w-96')}>   

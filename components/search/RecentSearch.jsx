@@ -15,7 +15,7 @@ function RecentSearch(){
                 </div>
             </div>
             <div className="flex h-96">
-                <ul className="my-2 flex flex-col flex-1 h-full scroll-smooth overflow-y-auto">
+                <ul className="my-2 flex flex-col flex-1 scroll-smooth overflow-y-auto">
                     <SearchItem img='/images/place-holder.jpg' name='thongle6636' description='Thong Le'/>
                     <SearchItem img='/images/post1.jpg' name='t__thien910' description='querry'/>
                     <SearchItem img='/images/place-holder.jpg' name='thongle6636' description='Thong Le'/>

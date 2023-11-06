@@ -1,6 +1,5 @@
 'use client'
 
-import Link from "next/link"
 import Avatar from "./Avatar"
 import {FiMoreHorizontal} from "react-icons/fi"
 import {AiOutlineClose} from "react-icons/ai"
@@ -33,18 +32,28 @@ function UserItem({
             </div>
             <div className="flex flex-1 flex-col justify-around h-9">
                 <div className="h-4 flex items-center">
-                    <Link href='/' className="text-xs font-bold">
+                    <span onClick={(e) => {
+                            e.stopPropagation();
+                            window.location.href='/';
+                        }}            
+                        className="text-xs font-bold"
+                    >
                         {name}
-                    </Link>
+                    </span>
                     {time && <div className="text-gray-400">
                         <span className="px-1">•</span>
-                        <Link href='/'>
+                            <span onClick={(e) => {
+                                e.stopPropagation();
+                                window.location.href='/';
+                            }}            
+                            className="text-xs font-bold"
+                        >
                             <span className="text-xs">
                                 <time dateTime="2017-03-08">
                                     10w
                                 </time>
                             </span>
-                        </Link>    
+                        </span>    
                     </div>}
                 </div>
                 <div className="h-4 flex items-center">

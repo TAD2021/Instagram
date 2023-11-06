@@ -11,11 +11,15 @@ const searchSlice = createSlice({
         toggleSearch: (state) => {
             state.search.isSearch = !state.search.isSearch;
         },
+        closeSearch: (state) => {
+            state.search.isSearch = false;
+        },
     },
 });
 
 export const {
-    toggleSearch
+    toggleSearch,
+    closeSearch
 } = searchSlice.actions;
 
 export default searchSlice.reducer;

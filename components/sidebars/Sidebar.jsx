@@ -7,15 +7,19 @@ import TabletLogo from "./TabletLogo";
 import { useSelector } from 'react-redux';
 import clsx from "clsx";
 import SearchWrapper from "../search/SearchWrapper";
+import { useRef } from "react";
 
 function Sidebar(){
     const isSearch = useSelector(state => state.search.search.isSearch)
+    const sidebarRef = useRef()
 
     return (
         <div className="
             relative
             w-16
-        ">
+        "
+            ref={sidebarRef}
+        >
             <div className={clsx(`
                 hidden
                 md:flex
@@ -29,12 +33,13 @@ function Sidebar(){
                 pb-5 
                 border-r 
                 overflow-hidden
-                z-20
+                z-40
                 border-gray-300
                 bg-white
                 transition-all ease-in-out
             `, isSearch && 'tw-w-sb'
-            )}>
+            )}
+            >
                 <DesktopLogo isSearch={isSearch}/>
                 <TabletLogo isSearch={isSearch}/>
                 <SidebarContent/> 
@@ -44,7 +49,7 @@ function Sidebar(){
                     icon={CgDetailsMore}
                 />
             </div>
-            <SearchWrapper isSearch={isSearch}/>
+            <SearchWrapper sidebarRef={sidebarRef} isSearch={isSearch}/>
         </div>
     )
 }
