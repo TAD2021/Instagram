@@ -2,20 +2,21 @@
 
 import clsx from 'clsx';
 import Image from 'next/image'
-import { useState } from 'react';
 
-function Avatar({image, size, type}){
-    const [width, setWidth] = useState(size)
-
+function Avatar({image, type}){
     return (
         <Image
             src={image}
-            width={width}
-            height={width}
+            width={60}
+            height={60}            
             className={clsx(`
                 rounded-full
                 min-w-[27px]
-            `, type === "story" && "min-w-[48px]")}
+                object-cover
+            `,  type === 'status' && "h-10 w-10",
+                type === 'story' && "w-full h-full",
+                type === "sidebar" && "w-[27px] h-[27px]"
+            )}
             alt=''
         />
     )

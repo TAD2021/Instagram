@@ -14,6 +14,7 @@ function SidebarContent() {
                 flex
                 flex-col
                 justify-between
+                flex-1
             "
         >
             {routes.map((item) => (

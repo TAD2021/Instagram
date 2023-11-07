@@ -15,18 +15,18 @@ function UserItem({
     search,
     time
 }){
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true)
 
     return (
         <div className="
             flex w-full
             items-center
-            max-h-11
+            max-h-12
         ">
             <div className="mr-3">
-                <div className={clsx(`bg-transparent p-[1.5px] rounded-full`, active && 'bg-gradient-to-tr from-yellow-500 to-red-600')}>
-                    <div className="bg-white rounded-full p-1">
-                        <Avatar image={img} size={status ? '32' : '44'}/> 
+                <div className={clsx(`bg-transparent p-[2px] rounded-full`, active && 'bg-gradient-to-tr from-yellow-500 to-red-600')}>
+                    <div className="bg-white rounded-full p-[2px]">
+                        <Avatar image={img} type="status"/> 
                     </div>
                 </div>
             </div>

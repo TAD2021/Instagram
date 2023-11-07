@@ -27,11 +27,14 @@ function Reel(){
     }
     useEffect(() => {
         const videoElement = videoRef.current;
+        // videoElement.addEventListener('loadedmetadata', () => {
+        //     console.log('Original video width: ', videoElement.videoWidth);
+        //     console.log('Original video height: ', videoElement.videoHeight);
+        // });
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     videoElement.play().catch((error) => {
-                        // Xử lý lỗi nếu có
                         console.error('Failed to play video:', error)
                     });
                     setIsPlaying(true)
@@ -41,16 +44,12 @@ function Reel(){
                 }
             });
         });
-      
         observer.observe(videoElement);
-
         const handleVideoEnded = () => {
             videoElement.currentTime = 0; // Tua lại video về thời điểm 0
             videoElement.play(); // Phát video lại
         };
-            
-        videoElement.addEventListener('ended', handleVideoEnded);
-            
+        videoElement.addEventListener('ended', handleVideoEnded);   
         return () => {
             observer.unobserve(videoElement);
             videoElement.removeEventListener('ended', handleVideoEnded);

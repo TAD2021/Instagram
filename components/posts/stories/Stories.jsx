@@ -30,7 +30,7 @@ function Stories() {
                 <div className="relative">
                     <div className="flex justify-center">
                         <div ref={storiesRef} onScroll={onScroll} className="
-                            flex space-x-2 overflow-x-scroll max-w-lg
+                            flex space-x-4 overflow-x-scroll max-w-lg
                           bg-white border-gray-200
                             p-4 scrollbar-hide scroll-smooth
                         ">

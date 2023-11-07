@@ -1,5 +1,3 @@
-
-
 import PostsList from "@/components/posts/PostsList"
 import Recommend from "@/components/recommend/Recommend"
 import Sidebar from "@/components/sidebars/Sidebar"

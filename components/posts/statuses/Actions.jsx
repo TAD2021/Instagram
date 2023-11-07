@@ -3,7 +3,7 @@
 import { AiOutlineHeart, AiOutlineSmile } from 'react-icons/ai';
 import { GoComment } from 'react-icons/go';
 import { PiTelegramLogo} from "react-icons/pi";
-import { CiSaveDown2 } from "react-icons/ci";
+import { BsBookmark } from "react-icons/bs";
 import Link from 'next/link';
 import { useState } from 'react';
 import clsx from 'clsx';
@@ -33,7 +33,7 @@ function Actions(){
                     </div>
                 </div>
                 <div className="flex-1 flex items-center justify-end">
-                    <CiSaveDown2 className='w-5 h-5 hover:opacity-60 cursor-pointer'/>
+                    <BsBookmark className='w-5 h-5 hover:opacity-60 cursor-pointer'/>
                 </div>
             </div>
             <div className='flex'>

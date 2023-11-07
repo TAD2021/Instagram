@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import Link from "next/link"
 import Avatar from "../Avatar"
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleSearch } from '@/redux/searchSlice';
 
 function SidebarItem({
@@ -25,7 +25,7 @@ function SidebarItem({
     return (
         <>
             { href ? (
-                <Link href={href}>
+                <Link href={href} >
                     <div className={clsx(`
                         p-2
                         my-1
@@ -46,7 +46,7 @@ function SidebarItem({
                                     active && 'fill-rose-500'
                                 )}/>
                             ): (
-                                <Avatar image='/images/place-holder.jpg' size='27'/>
+                                <Avatar image='/images/place-holder.jpg' type="sidebar"/>
                             )}
                         </div>
                         <div className='
