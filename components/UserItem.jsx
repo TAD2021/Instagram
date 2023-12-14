@@ -40,7 +40,7 @@ function UserItem({
                     >
                         {name}
                     </span>
-                    {time && <div className="text-gray-400">
+                    {time && <div className="text-gray-400 flex items-center">
                         <span className="px-1">•</span>
                             <span onClick={(e) => {
                                 e.stopPropagation();

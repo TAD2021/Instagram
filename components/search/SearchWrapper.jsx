@@ -43,7 +43,7 @@ function SearchWrapper({sidebarRef, isSearch}){
                             <div className='flex mb-6 h-10 relative'>
                                 <input 
                                     placeholder='Search...' 
-                                    className='rounded-md flex-1 py-1 px-4 bg-gray-100 outline-none'
+                                    className='rounded-md flex-1 py-1 pl-4 pr-10 bg-gray-100 outline-none'
                                     value={searchValue}
                                     onChange={(e)=>setSearchValue(e.target.value)}
                                 >
